@@ -68,40 +68,6 @@
     }
   },
   {
-    "pk": 86,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 8,
-      "full_number": null,
-      "name": "AR",
-      "parent": 2,
-      "level": 2,
-      "lft": 7,
-      "tree_id": 1,
-      "active": true,
-      "type": 1,
-      "slug": "ar",
-      "description": ""
-    }
-  },
-  {
-    "pk": 5,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 10,
-      "full_number": null,
-      "name": "ARP",
-      "parent": 2,
-      "level": 2,
-      "lft": 9,
-      "tree_id": 1,
-      "active": true,
-      "type": 1,
-      "slug": "arp",
-      "description": ""
-    }
-  },
-  {
     "pk": 3,
     "model": "accounts.header",
     "fields": {
@@ -391,40 +357,6 @@
     }
   },
   {
-    "pk": 45,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 3,
-      "full_number": null,
-      "name": "Seed Racks Material & Supplies",
-      "parent": 43,
-      "level": 1,
-      "lft": 2,
-      "tree_id": 2,
-      "active": true,
-      "type": 5,
-      "slug": "seed-racks-material-supplies",
-      "description": ""
-    }
-  },
-  {
-    "pk": 44,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 5,
-      "full_number": null,
-      "name": "SESE Materials & Supplies",
-      "parent": 43,
-      "level": 1,
-      "lft": 4,
-      "tree_id": 2,
-      "active": true,
-      "type": 5,
-      "slug": "sese-materials-supplies",
-      "description": ""
-    }
-  },
-  {
     "pk": 34,
     "model": "accounts.header",
     "fields": {
@@ -629,23 +561,6 @@
     }
   },
   {
-    "pk": 61,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 23,
-      "full_number": null,
-      "name": "GMED Expenses",
-      "parent": 55,
-      "level": 1,
-      "lft": 22,
-      "tree_id": 4,
-      "active": true,
-      "type": 6,
-      "slug": "gmed-expenses",
-      "description": ""
-    }
-  },
-  {
     "pk": 72,
     "model": "accounts.header",
     "fields": {
@@ -727,108 +642,6 @@
       "active": true,
       "type": 6,
       "slug": "insurance",
-      "description": ""
-    }
-  },
-  {
-    "pk": 57,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 43,
-      "full_number": null,
-      "name": "SESE Expense",
-      "parent": 55,
-      "level": 1,
-      "lft": 34,
-      "tree_id": 4,
-      "active": true,
-      "type": 6,
-      "slug": "sese-expense",
-      "description": ""
-    }
-  },
-  {
-    "pk": 59,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 36,
-      "full_number": null,
-      "name": "EVENTS",
-      "parent": 57,
-      "level": 2,
-      "lft": 35,
-      "tree_id": 4,
-      "active": true,
-      "type": 6,
-      "slug": "events",
-      "description": ""
-    }
-  },
-  {
-    "pk": 58,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 38,
-      "full_number": null,
-      "name": "RETAIL",
-      "parent": 57,
-      "level": 2,
-      "lft": 37,
-      "tree_id": 4,
-      "active": true,
-      "type": 6,
-      "slug": "retail",
-      "description": ""
-    }
-  },
-  {
-    "pk": 60,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 40,
-      "full_number": null,
-      "name": "Seed Racks Wholesale Program",
-      "parent": 57,
-      "level": 2,
-      "lft": 39,
-      "tree_id": 4,
-      "active": true,
-      "type": 6,
-      "slug": "seed-racks-wholesale-program",
-      "description": ""
-    }
-  },
-  {
-    "pk": 62,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 42,
-      "full_number": null,
-      "name": "SESE Payroll",
-      "parent": 57,
-      "level": 2,
-      "lft": 41,
-      "tree_id": 4,
-      "active": true,
-      "type": 6,
-      "slug": "sese-payroll",
-      "description": ""
-    }
-  },
-  {
-    "pk": 63,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 45,
-      "full_number": null,
-      "name": "Tinnery Expenses",
-      "parent": 55,
-      "level": 1,
-      "lft": 44,
-      "tree_id": 4,
-      "active": true,
-      "type": 6,
-      "slug": "tinnery-expenses",
       "description": ""
     }
   },
@@ -1088,23 +901,6 @@
     }
   },
   {
-    "pk": 23,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 24,
-      "full_number": null,
-      "name": "A/P Twin Oaks",
-      "parent": 21,
-      "level": 2,
-      "lft": 23,
-      "tree_id": 5,
-      "active": true,
-      "type": 2,
-      "slug": "ap-twin-oaks",
-      "description": ""
-    }
-  },
-  {
     "pk": 25,
     "model": "accounts.header",
     "fields": {
@@ -1360,23 +1156,6 @@
     }
   },
   {
-    "pk": 42,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 3,
-      "full_number": null,
-      "name": "Face Painting",
-      "parent": 36,
-      "level": 1,
-      "lft": 2,
-      "tree_id": 8,
-      "active": true,
-      "type": 4,
-      "slug": "face-painting",
-      "description": ""
-    }
-  },
-  {
     "pk": 37,
     "model": "accounts.header",
     "fields": {
@@ -1407,40 +1186,6 @@
       "active": true,
       "type": 4,
       "slug": "agricultural-products",
-      "description": ""
-    }
-  },
-  {
-    "pk": 40,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 8,
-      "full_number": null,
-      "name": "GMED Income",
-      "parent": 37,
-      "level": 2,
-      "lft": 7,
-      "tree_id": 8,
-      "active": true,
-      "type": 4,
-      "slug": "gmed-income",
-      "description": ""
-    }
-  },
-  {
-    "pk": 39,
-    "model": "accounts.header",
-    "fields": {
-      "rght": 10,
-      "full_number": null,
-      "name": "SESE Income",
-      "parent": 37,
-      "level": 2,
-      "lft": 9,
-      "tree_id": 8,
-      "active": true,
-      "type": 4,
-      "slug": "sese-income",
       "description": ""
     }
   },
