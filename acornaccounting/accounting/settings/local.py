@@ -3,6 +3,7 @@ from .base import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+COMPRESS_ENABLED = False
 
 EMAIL_HOST = "localhost"
 EMAIL_PORT = 1025
