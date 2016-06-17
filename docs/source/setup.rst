@@ -242,8 +242,15 @@ you may need to write an rc.d or init.d startup script:
                 echo "Error: No Accounting uWSGI Process Found."
             fi
             ;;
+        'status')
+            if [ -f $PIDFILE ] && [ "$(ps -o comm= "$(cat $PIDFILE)")" = uwsgi ]; then
+                echo "Accounting uWSGI Process is running."
+            else
+                echo "Accounting uWSGI Process is not running."
+            fi
+            ;;
         *)
-            echo "Usage: /etc/rc.d/rc.accounting {start|stop|restart}"
+            echo "Usage: /etc/rc.d/rc.accounting {start|stop|restart|status}"
             exit 1
             ;;
     esac
