@@ -97,6 +97,7 @@ CONSTANCE_CONFIG = {
                        "your company's city, state and zipcode."),
     'PHONE': ('(456)555-0925', "your company's phone number."),
     'TAX_ID': ('00-0000000', "your company's federal tax id."),
+    'PRIVATE': (False, "does the site require logging in to view content"),
 }
 
 CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'

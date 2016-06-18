@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 
 from core.views import (list_entries, show_single_entry,
                         AddApprovableEntryView)
+from core.auth import login_required_if_private
 
 from .forms import CreditCardEntryForm, CreditCardTransactionFormSet
 from .models import CreditCardEntry, CreditCardReceipt
@@ -13,12 +14,14 @@ def list_creditcard_entries(request, template_name='creditcards/list.html'):
     return list_entries(request, template_name, CreditCardEntry)
 
 
+@login_required_if_private
 def show_creditcard_entry(request, entry_id,
                           template_name="creditcards/show_entry.html"):
     """View a :class:`~.models.CreditCardEntry`."""
     return show_single_entry(request, entry_id, template_name, CreditCardEntry)
 
 
+@login_required_if_private
 def add_creditcard_entry(request, entry_id=None,
                          template_name="creditcards/credit_card_form.html"):
     """Add, edit, approve or delete a :class:`~.models.CreditCardEntry`."""

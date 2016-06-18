@@ -4,9 +4,11 @@ from django.shortcuts import render
 
 from accounts.models import Account, Header
 from core.core import process_year_start_date_range_form
+from core.auth import login_required_if_private
 from events.models import Event, HistoricalEvent
 
 
+@login_required_if_private
 def events_report(request, template_name="reports/events.html"):
     """Display all :class:`Events<events.models.Event>`.
 
@@ -21,6 +23,7 @@ def events_report(request, template_name="reports/events.html"):
     return render(request, template_name, locals())
 
 
+@login_required_if_private
 def profit_loss_report(request, template_name="reports/profit_loss.html"):
     """
     Display the Profit or Loss for a time period calculated using all Income
@@ -139,6 +142,7 @@ def _get_profit_totals(headers):
     return (gross_profit, operating_profit, net_profit)
 
 
+@login_required_if_private
 def trial_balance_report(request, template_name="reports/trial_balance.html"):
     """
     Display the state and change of all :class:`Accounts

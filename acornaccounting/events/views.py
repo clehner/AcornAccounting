@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 
+from core.auth import login_required_if_private
+
 from .models import Event
 
 
+@login_required_if_private
 def show_event_detail(request, event_id,
                       template_name="events/event_detail.html"):
     """Shows the details of an :class:`~events.models.Event` instance.

@@ -8,6 +8,7 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 
 from core.core import process_month_start_date_range_form
+from core.auth import login_required_if_private
 
 from .forms import (JournalEntryForm, BankSpendingForm, BankReceivingForm,
                     TransactionFormSet, TransferFormSet,
@@ -17,6 +18,7 @@ from .models import (Transaction, JournalEntry, BankSpendingEntry,
                      BankReceivingEntry)
 
 
+@login_required_if_private
 def journal_ledger(request, template_name="entries/journal_ledger.html"):
     """Display a list of :class:`Journal Entries<.models.JournalEntry>`.
 
@@ -33,6 +35,7 @@ def journal_ledger(request, template_name="entries/journal_ledger.html"):
     return render(request, template_name, locals())
 
 
+@login_required_if_private
 def show_journal_entry(request, entry_id,
                        template_name="entries/entry_detail.html"):
     """Display the details of a :class:`~.models.JournalEntry`.
@@ -56,6 +59,7 @@ def show_journal_entry(request, entry_id,
     return render(request, template_name, locals())
 
 
+@login_required_if_private
 def show_bank_entry(request, entry_id, journal_type):
     """
     Display the details of a :class:`~.models.BankSpendingEntry` or

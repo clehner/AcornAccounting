@@ -14,12 +14,14 @@ from core.core import (today_in_american_format,
                        remove_trailing_zeroes,
                        process_month_start_date_range_form,
                        process_year_start_date_range_form)
+from core.auth import login_required_if_private
 from fiscalyears.fiscalyears import get_start_of_current_fiscal_year
 
 from .forms import AccountReconcileForm, ReconcileTransactionFormSet
 from .models import Account, Header, HistoricalAccount
 
 
+@login_required_if_private
 def quick_account_search(request):
     """Processes search for quick_account tag"""
     if 'account' in request.GET:
@@ -30,6 +32,7 @@ def quick_account_search(request):
         raise Http404
 
 
+@login_required_if_private
 def quick_bank_search(request):
     """Processes search for bank journals"""
     if 'bank' in request.GET:
@@ -42,6 +45,7 @@ def quick_bank_search(request):
         raise Http404
 
 
+@login_required_if_private
 def show_accounts_chart(request, header_slug=None,
                         template_name="accounts/account_charts.html"):
     """Retrieves self and descendant Headers or all Headers"""
@@ -56,6 +60,7 @@ def show_accounts_chart(request, header_slug=None,
     return render(request, template_name, locals())
 
 
+@login_required_if_private
 def show_account_detail(request, account_slug,
                         template_name="accounts/account_detail.html"):
     """
@@ -128,6 +133,7 @@ def show_account_detail(request, account_slug,
     return render(request, template_name, locals())
 
 
+@login_required_if_private
 def show_account_history(request, month=None, year=None,
                          template_name="accounts/account_history.html"):
     """
@@ -222,6 +228,7 @@ def show_account_history(request, month=None, year=None,
         return render(request, template_name, {'accounts': '', 'date': date})
 
 
+@login_required_if_private
 def bank_journal(request, account_slug,
                  template_name="accounts/bank_journal.html"):
     form, start_date, stop_date = process_month_start_date_range_form(request)
@@ -334,6 +341,7 @@ def reconcile_account(request, account_slug,
 
 
 @ajax
+@login_required_if_private
 def accounts_query(request):
     """AJAX endpoint for querying Account Names & Descriptions.
 

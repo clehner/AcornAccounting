@@ -13,6 +13,8 @@
       <a class="navbar-brand" href="{% url homepage %}">{{ config.NAME }}</a>
     </div>
 
+    {% if user.is_authenticated or not config.PRIVATE %}
+
     <div class="collapse navbar-collapse" id="header-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
         <li class="dropdown">
@@ -69,6 +71,8 @@
           </ul>
         </li>
       </ul>
+
+    {% endif %}
     </div>
   </div>
 </header>

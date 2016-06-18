@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 
 from core.views import (list_entries, show_single_entry,
                         AddApprovableEntryView)
+from core.auth import login_required_if_private
 
 from .forms import (TripEntryForm, TripTransactionFormSet,
                     TripStoreTransactionFormSet)
@@ -14,11 +15,13 @@ def list_trip_entries(request, template_name='trips/list.html'):
     return list_entries(request, template_name, TripEntry)
 
 
+@login_required_if_private
 def show_trip_entry(request, entry_id, template_name='trips/detail.html'):
     """View a :class:`~.models.TripEntry`."""
     return show_single_entry(request, entry_id, template_name, TripEntry)
 
 
+@login_required_if_private
 def add_trip_entry(request, entry_id=None, template_name='trips/form.html'):
     """Add, edit, approve or delete a :class:`~.models.TripEntry`."""
     view = AddTripEntryView()
