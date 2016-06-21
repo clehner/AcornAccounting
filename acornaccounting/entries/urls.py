@@ -7,6 +7,8 @@ urlpatterns = patterns(
     (r'^add/(?P<journal_type>C[DR])/$', 'add_bank_entry'),
     (r'^add/transfer/$', 'add_transfer_entry'),
 
+    (r'^import/$', 'import_entries'),
+
     (r'^edit/GJ/(?P<entry_id>\d+)/$', 'add_journal_entry',),
     (r'^edit/(?P<journal_type>C[DR])/(?P<entry_id>\d+)/$', 'add_bank_entry'),
 

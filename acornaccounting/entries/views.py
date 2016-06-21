@@ -430,3 +430,19 @@ def add_transfer_entry(request, template_name="entries/transfer_form.html"):
                   {'entry_form': entry_form,
                    'transaction_formset': transfer_formset,
                    'verbose_entry_type': "Transfer Entry"})
+
+@login_required
+def import_entries(request, template_name="entries/import_entries.html"):
+    """Import :class:`JournalEntries<.models.JournalEntry>`  from a bank statement.
+
+    A bank statement is a file containing entries. The user uploads such a file
+    and then for each entry creates or associates a :class:`JournalEntries<.models.JournalEntry>`.
+
+    :param template_name: The template to use.
+    :type template_name: str
+    :returns: HTTP response containing a :class:`~.forms.JournalEntryForm`,
+            a :class:`~.forms.TransferFormSet` and a ``verbose_journal_type``
+            of ``Transfer Entry``.
+    :rtype: :class:`~django.http.HttpResponse`
+    """
+    return render(request, template_name)
